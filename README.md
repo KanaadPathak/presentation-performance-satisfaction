@@ -14,7 +14,7 @@ Information Retrieval (IR) systems are designed to provide users with a ranked l
 
 #### Collection
 
-TREC WAPO 2018
+TREC WaPo 2018
 
 #### Topics
 
@@ -28,7 +28,7 @@ TREC WAPO 2018
 
 #### Interfaces
 
-| Interface Type       | Description                                 | Card Type |
+| Interface Layout       | Description                                 | Card Type |
 |-------------|---------------------------------------------|-----------|
 | BASE        | Title only                                  | 3         |
 | BASE_WAPO   | Title + Image + Summary [image on the right]| 6         |
@@ -58,38 +58,38 @@ The user could:
 #### Data Recorded
 
 ---- `serp_annotations.csv`----
- 1. doc_id
- 2. query
- 3. rank
+ 1. doc_id - document_id of the WaPo indexed document
+ 2. query - query clicked on for retrieving the doc_id
+ 3. rank - rank of the doc_id on the page
  4. click (0 = skipped, 1 = clicked)
  5. time_spent 
- 6. judgement
+ 6. judgement 
  7. actual_qrel_value (extracted from qrels file of TREC WaPo)
  8. card_type
  9. interface_type
- 10. topic_id  
- 11. user
- 12. cards_shown_on_page
+ 10. topic_id - the topic for which this document was marked
+ 11. user 
+ 12. cards_shown_on_page - number of items shown on the current page. The total number of items depended on card type and space available on the page (see paper, if rank  == cards_shown_on_page, then that is where there is a page break, and the user click on the `next page` button to view the rest of the results)
 
 ---- `document_annotation.csv`----
 
- 1. doc_id
- 2. document_title 
- 3. query
+ 1. doc_id - document_id of the WaPo indexed document
+ 2. document_title - the title of the document that was displayed
+ 3. query - the query for which this full document was displayed
  4. judgement (1 = relevant. 0 = non-relevant)
- 5. actual_qrel_value
- 6. card_type
- 7. notes (text recorded on relevance criteria before saving a document)
+ 5. actual_qrel_value - actual TREC relevance value
+ 6. card_type - the card type via which this document was clicked
+ 7. notes - text recorded on relevance criteria before saving a document
  8. interface_type
- 9. doc_browsing_time
- 10. doc_decision_time
- 11. doc_mark_item_time
- 12. topic_id
+ 9. doc_browsing_time - the time from when the document was displayed to when a button was clicked
+ 10. doc_decision_time - 
+ 11. doc_mark_item_time - the time the user spent in copy-pasting into the text field
+ 12. topic_id - topic id for which this document was inspected
  13. user
- 14. total_time
+ 14. total_time 
 
 ---- `topic_annotation.csv`----
 
-This file contains temporary variables used during the study and was used for monitoring experiment completion. Timing data for completing the various parts of experiment can be found here
+This file contains temporary variables used during the study and was used for monitoring experiment completion. Timing data for completing the various parts of the experiment can be found here
 
 
