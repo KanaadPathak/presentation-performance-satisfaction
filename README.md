@@ -51,6 +51,10 @@ The user could:
  6. Provide a satisfaction rating for a query (recorded under `query_feedback.csv`)
  7. Provide a satisfaction rating for an interface (recorded under `interface_feedback.csv`)
 
+
+![Flow Diagram](diagram/flow_diagram.png)
+
+
 #### Data Recorded
 
 ---- `serp_annotations.csv`----
