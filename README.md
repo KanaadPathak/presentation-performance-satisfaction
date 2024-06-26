@@ -88,3 +88,8 @@ The user could:
  13. user
  14. total_time
 
+---- `topic_annotation.csv`----
+
+This file contains temporary variables used during the study and was used for monitoring experiment completion. Timing data for completing the various parts of experiment can be found here
+
+
